@@ -1,12 +1,17 @@
-public class Odd {
+/**
+* Print the odd numbers from 1 to 99.
+*/
+class Odd {
 
-  int x = 1;
+  //starting variable @ 1
+  static int x = 1;
+  public static void main(String [] args){
 
-  if (x % 2 ==0) {
-    x++;
-    continue;
-  } else {
-    System.out.println(x);
-    x++;
+  for (; x < 100; x++) {
+    if (x % 2 ==0) {
+    } else {
+      System.out.println(x);
+    }
   }
+}
 }
