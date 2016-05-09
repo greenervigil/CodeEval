@@ -25,7 +25,7 @@ class PrimePalindrome {
 
   public static boolean isPalindrome(int num){
     String splitNum = num.toString();
-    int [] check = splitNum.split("").reverse();
+    int [] Array.toInt(check) = splitNum.split("").reverse();
 
     if (check == num){
       return true;
