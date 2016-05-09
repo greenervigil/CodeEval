@@ -19,17 +19,11 @@ class PrimePalindrome {
         if (num % div == 0){
           return false;
         }
-        return true;
       }
+      return true;
   }
 
   public static boolean isPalindrome(int num){
-    String splitNum = num.toString();
-    int [] check = splitNum.split("").reverse();
-
-    if (check == num){
-      return true;
+    return true;
     }
-    return false;
   }
-}
