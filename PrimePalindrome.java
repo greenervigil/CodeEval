@@ -1,19 +1,20 @@
-import java.lang.*;
-
+/**
+* Write a program which determines the largest prime palindrome less *than 1000.
+**/
 class PrimePalindrome {
 
-  private final static int MAX = 1000;
-  private static int prime;
-  private static int num = 2;
-  static int rev = 0;
+  final static int MAX = 1000;
+  static int prime;
+  static int num = 2;
 
   public static void main(String [] args){
 
     // loop through 2 - 1000
-    for(; num < MAX; num++){
+    while (num <= MAX){
       if (isPrime(num) && isPalindrome(num)){
         prime = num;
       }
+      num++;
     }
     System.out.println(prime);
   }
@@ -22,12 +23,12 @@ class PrimePalindrome {
   // Modding by 10 extracts the rightmost digit
   //Multiply by 10 pushed left exposing a 0 to the right
   // Divide by 10 removes the rightmost digit
-  public static int reverse(int number){
-
+  public static int reverse(int num){
+    int rev = 0;
     while (num != 0){
       int digit = num % 10;
       rev = rev * 10 + digit;
-      number = number / 10;
+      num = num / 10;
     }
     return rev;
   }
@@ -36,15 +37,12 @@ class PrimePalindrome {
   public static boolean isPalindrome(int num){
     return num == reverse(num);
     }
+
     //Test for Prime number
     public static boolean isPrime(int num){
-        if (num == 2) {
-          return true;
-        }
+        if (num == 2) return true;
         for(int div = 2; div <= num/2; div++){
-          if (num % div == 0){
-            return false;
-          }
+          if (num % div == 0) return false;
         }
         return true;
     }
