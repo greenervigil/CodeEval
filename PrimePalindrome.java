@@ -6,7 +6,7 @@ class PrimePalindrome {
   final static int MAX = 1000;
   static int prime;
   static int num = 2;
-
+  
   public static void main(String [] args){
 
     // loop through 2 - 1000
@@ -18,12 +18,13 @@ class PrimePalindrome {
     }
     System.out.println(prime);
   }
+  */
 
   //reverse the integer to test for possible palindrome
   // Modding by 10 extracts the rightmost digit
   //Multiply by 10 pushed left exposing a 0 to the right
   // Divide by 10 removes the rightmost digit
-  public static int reverse(int num){
+  public int reverse(int num){
     int rev = 0;
     while (num != 0){
       int digit = num % 10;
@@ -34,12 +35,12 @@ class PrimePalindrome {
   }
 
   //return true or false if the palindrome condition is met
-  public static boolean isPalindrome(int num){
+  public boolean isPalindrome(int num){
     return num == reverse(num);
     }
 
     //Test for Prime number
-    public static boolean isPrime(int num){
+    public boolean isPrime(int num){
         if (num == 2) return true;
         for(int div = 2; div <= num/2; div++){
           if (num % div == 0) return false;
