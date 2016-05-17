@@ -14,7 +14,7 @@ class FizzBuzz{
     int Y;
     int N;
 
-    //try-catch to open the file provided by ARGS input
+    //try-catch to open the file provided by ARGS 
     try {
       FileReader fr = new FileReader(args[0]);
       BufferedReader br = new BufferedReader(fr);
