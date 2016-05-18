@@ -14,7 +14,7 @@ class FizzBuzz{
     int Y;
     int N;
 
-    //try-catch to open the file provided by ARGS 
+    //try-catch to open the file provided by ARGS
     try {
       FileReader fr = new FileReader(args[0]);
       BufferedReader br = new BufferedReader(fr);
@@ -34,7 +34,7 @@ class FizzBuzz{
   }
 
   //method to replace the string if divisible
-  public static String [] replace(String[] arr){
+  /*public static String [] replace(String[] arr){
     int x = Integer.parseInt(arr[0]);
     int y = Integer.parseInt(arr[1]);
     int n = Integer.parseInt(arr[2]);
@@ -52,5 +52,5 @@ class FizzBuzz{
       }
     }
     return newArr;
-  }
+  }*/
 }
