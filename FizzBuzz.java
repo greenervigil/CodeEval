@@ -34,7 +34,7 @@ class FizzBuzz{
   }
 
   //method to replace the string if divisible
-  /*public static String [] replace(String[] arr){
+  public static String [] replace(String[] arr){
     int x = Integer.parseInt(arr[0]);
     int y = Integer.parseInt(arr[1]);
     int n = Integer.parseInt(arr[2]);
@@ -52,5 +52,5 @@ class FizzBuzz{
       }
     }
     return newArr;
-  }*/
+  }
 }
