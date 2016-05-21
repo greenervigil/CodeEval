@@ -20,7 +20,6 @@ class FizzBuzz{
       BufferedReader br = new BufferedReader(fr);
       while ((line = br.readLine()) != null){
         String [] ar = line.split("\\s");
-        System.out.println(ar);
         if (ar.length > 0){
           System.out.println(replace(ar));
         }
@@ -32,7 +31,7 @@ class FizzBuzz{
       System.out.println("Could not open file.");
     }
   }
-
+  //replace method
   //method to replace the string if divisible
   public static String [] replace(String[] arr){
     int x = Integer.parseInt(arr[0]);
@@ -41,11 +40,11 @@ class FizzBuzz{
     String [] newArr;
 
     for(int i =1; i <= n; i++){
-      if((Integer.parseInt(i) % x == 0) && (Integer.parseInt(i) % y == 0)){
+      if(i % x == 0) && (i % y == 0)){
         newArr.push("FB");
-      }else if (Integer.parseInt(i) % x == 0){
+      }else if (i % x == 0){
         newArr.push("F");
-      }else if (Integer.parseInt(i) % y == 0){
+      }else if (i % y == 0){
         newArr.push("B");
       }else {
         newArr.push(i.toString());
