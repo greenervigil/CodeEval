@@ -33,6 +33,7 @@ class FizzBuzz{
   }
   //replace method
   //method will replace the to f, B, or FB
+  //will start at 1  and count up to n
   //method to replace the string if divisible
   public static String [] replace(String[] arr){
     int x = Integer.parseInt(arr[0]);
