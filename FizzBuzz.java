@@ -8,11 +8,6 @@ import java.io.*;
 class FizzBuzz{
 
   public static void main(String [] args) throws IOException{
-    //variables
-    String line = null;
-    int X;
-    int Y;
-    int N;
 
     //try-catch to open the file provided by ARGS
     try {
