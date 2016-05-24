@@ -1,4 +1,5 @@
 import java.io.*;
+import java.util.*;
 
 public class ReverseWords {
 
@@ -8,10 +9,16 @@ public class ReverseWords {
     try {
       FileReader fr = new FileReader(args[0]);
       BufferedReader br = new BufferedReader(fr);
-      while ((line = br.readLine()) != null){
-        String [] ar = line.split("\\s");
+      String ln;
+      List<String> rev = new ArrayList<>();
+      while ((ln = br.readLine()) != null){
+        String [] ar = ln.split("\\s");
         if (ar.length > 0){
-          System.out.println(reverse(ar));
+          for (String e : ar){
+            rev.add(e);
+          }
+        //reverse(rev);
+        System.out.println(Collections.reverse(rev));
         }
       }
 
@@ -23,7 +30,7 @@ public class ReverseWords {
   }
 
   //method to reverse the words in a string array
-  public static String [] reverse(String [] array){
-    return array.reverse();
-  }
+  /*public static List<String> reverse(List<String> arr){
+    System.out.println(Collections.reverse(arr));
+  }*/
 }
