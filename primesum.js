@@ -6,6 +6,9 @@ for (var num = 2; num <= 10000; num++){
     sum += num;
     primeCount++;
   }
+  if (primeCount == 1000){
+    break;
+  }
 }
 
 console.log(sum);

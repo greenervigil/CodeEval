@@ -17,8 +17,8 @@ public class ReverseWords {
           for (String e : ar){
             rev.add(e);
           }
-        //reverse(rev);
-        System.out.println(Collections.reverse(rev));
+        reverse(rev);
+        //System.out.println(Collections.reverse(rev));
         }
       }
 
@@ -30,7 +30,7 @@ public class ReverseWords {
   }
 
   //method to reverse the words in a string array
-  /*public static List<String> reverse(List<String> arr){
+  public static void reverse(List<String> arr){
     System.out.println(Collections.reverse(arr));
-  }*/
+  }
 }
