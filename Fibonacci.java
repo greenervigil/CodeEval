@@ -13,16 +13,16 @@ import java.io.*;
 class Fibonacci{
 
   public static void main(String [] args) throws IOException{
-    
-    String line = null;
 
+    String line = null;
+    //look for file for input
     try {
       FileReader fr = new FileReader(args[0]);
       BufferedReader br = new BufferedReader(fr);
       while ((line = br.readLine()) != null){
+        //while there is a line with data send it to getFib method //converting to the line to a string.
         System.out.println(getFib(Integer.parseInt(line)));
       }
-
       br.close();
     }
     catch(FileNotFoundException e){
@@ -34,10 +34,10 @@ class Fibonacci{
   determines the Fibonacci sequence
   */
   public static int getFib(int n){
-    if (n <= 1){
-      return n;
-    }else{
-      return getFib(n-1) + getFib(n-2);
+      if (n <= 1){
+        return n;
+      }else{
+        return getFib(n-1) + getFib(n-2);
+      }
     }
   }
-}
