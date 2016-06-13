@@ -5,10 +5,9 @@ File.open(ARGV[0]).each_line do |line|
    lineSplit = line.split(",")
    x = lineSplit[0].to_i
    n = lineSplit[1].to_i
-   multiple = n
 
-   while multiple <= x do
-     multiple += n
+   while n <= x do
+     n += n
    end
-   puts multiple
+   puts "#{n}"
 end

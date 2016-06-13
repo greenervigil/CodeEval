@@ -1,2 +1,4 @@
-Hello World,r
-Hello CodeEval,E
+Hello world
+javaScript language
+a letter
+1st thing
