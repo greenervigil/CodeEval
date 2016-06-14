@@ -38,6 +38,6 @@ public class NmodM {
   }
   public static int mod(int n, int m){
     int div = n / m;
-    return n - div;
+    return n - (div * m);
   }
 }
