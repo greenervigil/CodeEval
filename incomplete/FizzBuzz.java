@@ -14,7 +14,7 @@ class FizzBuzz{
       FileReader fr = new FileReader(args[0]);
       BufferedReader br = new BufferedReader(fr);
       while ((line = br.readLine()) != null){
-        String [] ar = line.split("\\s");
+        String [] ar = line.split(" ");
         if (ar.length > 0){
           System.out.println(replace(ar));
         }
@@ -37,7 +37,7 @@ class FizzBuzz{
     String [] newArr;
 
     for(int i =1; i <= n; i++){
-      if(i % x == 0) && (i % y == 0)){
+      if((i % x == 0) && (i % y == 0)){
         newArr.push("FB");
       }else if (i % x == 0){
         newArr.push("F");
