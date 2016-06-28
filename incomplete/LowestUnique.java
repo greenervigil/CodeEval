@@ -17,3 +17,30 @@ Print a winner's position or 0 in case there is no winner. In the first line of 
 0
 
 */
+import java.io.*;
+
+public class LowestUnique {
+  public static void main(String [] args) throws IOException{
+
+    //try-catch to open the file provided by ARGS
+    try {
+      FileReader fr = new FileReader(args[0]);
+      BufferedReader br = new BufferedReader(fr);
+      String ln;
+      while ((ln = br.readLine()) != null){
+        String [] ar = ln.split("\\s");
+      }
+
+      br.close();
+    }
+    catch(FileNotFoundException e){
+      System.out.println("Could not open file.");
+    }
+  }
+
+  public static int uniqueSort(String [] evaluatingArray) {
+    int eval = 0;
+    
+    return eval;
+  }
+}
