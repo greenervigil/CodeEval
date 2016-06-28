@@ -5,6 +5,7 @@ while (start <= 12){
     var number = start * i;
     table.push(number);
   }
-  console.log(table);
+  console.log(table.join(" "));
+  table = [];
   start++;
 }
