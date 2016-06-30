@@ -27,7 +27,7 @@ public class CaseSwap {
       BufferedReader br = new BufferedReader(fr);
 
       while ((ln = br.readLine()) != null){
-        String [] ar = ln.split("\\s");
+        String [] ar = ln.split("");
         if (ar.length > 0){
           for (String e : ar){
             System.out.print(swap(e) + " ");
