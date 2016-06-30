@@ -29,6 +29,7 @@ public class LowestUnique {
       String ln;
       while ((ln = br.readLine()) != null){
         String [] ar = ln.split("\\s");
+        System.out.println(uniqueSort(ar));
       }
 
       br.close();
@@ -38,9 +39,19 @@ public class LowestUnique {
     }
   }
 
-  public static int uniqueSort(String [] evaluatingArray) {
-    int eval = 0;
-    
+  public static String uniqueSort(String [] evaluatingArray) {
+    String eval = "";
+    for (int i = 0; i <= evaluatingArray.length; i++){
+      for (String e : evaluatingArray){
+        if (evaluatingArray[i] == e){
+          break;
+        }else if (Integer.parseInt(evaluatingArray[i]) < Integer.parseInt(e)){
+          eval = e;
+        }else {
+          continue;
+        }
+      }
+    }
     return eval;
   }
 }
