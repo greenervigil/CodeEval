@@ -44,7 +44,6 @@ public class LowestUnique {
     for (int i = 0; i <= evaluatingArray.length; i++){
       for (String e : evaluatingArray){
         if (evaluatingArray[i] == e){
-          break;
         }else if (Integer.parseInt(evaluatingArray[i]) < Integer.parseInt(e)){
           eval = e;
         }else {
