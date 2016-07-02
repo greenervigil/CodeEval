@@ -49,7 +49,6 @@ public class LongestWord {
     int longest = 0;
     for (int i = 0; i < line.length; i++){
       if (line[i].length() == longest) {
-        break;
       }else if (line[i].length() > longest){
         longest = i;
       }
