@@ -19,3 +19,44 @@ Print results in the following way.
 Stephen King 1947
 Kyotaro Nishimura 1930
 */
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
+
+public class FindWriter {
+
+  public static void main(String [] args) throws IOException{
+
+    //try-catch to open the file provided by ARGS
+    try {
+      FileReader fr = new FileReader(args[0]);
+      BufferedReader br = new BufferedReader(fr);
+      String ln;
+      List<Integer> numKey = new ArrayList<Integer>();
+      while ((ln = br.readLine()) != null){
+        String [] ar = ln.split("|");
+        String name = ar[0];
+        String [] keys = ar[1].trim().split(" ");
+        for (String s : keys){
+          numKey.add(Integer.parseInt(s));
+        }
+        System.out.println(numKey);
+        System.out.println(author(name, numKey));
+        }
+        br.close();
+    }
+    catch(FileNotFoundException e){
+      System.out.println("Could not open file.");
+    }
+
+  }
+
+
+    public static String author(String codedString, List<Integer> key){
+      String decodedAuthor = "";
+      for (int i : key){
+        decodedAuthor.concat(codedString.valueOf(codedString.charAt(i)));
+      }
+      return decodedAuthor;
+    }
+}
