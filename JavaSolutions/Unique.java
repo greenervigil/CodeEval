@@ -21,6 +21,7 @@ E.g.
 2,3,4,5
 */
 import java.io.*;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,13 +39,14 @@ public class Unique {
         List<Integer> numbers = new ArrayList<>();
         for (String s : ar) {
           if (numbers.contains(Integer.parseInt(s))){
+            continue;
           }else{
             numbers.add(Integer.parseInt(s));
             newString += s + ",";
           }
         }
-
-        System.out.println(newString);
+        int index = (newString.length() - 1);
+        System.out.println(newString.substring(0, index));
       }
       br.close();
     }
