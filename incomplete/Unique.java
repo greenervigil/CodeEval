@@ -20,3 +20,36 @@ E.g.
 1,2,3,4
 2,3,4,5
 */
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Unique {
+  public static void main(String [] args) throws IOException{
+    String ln;
+    //try-catch to open the file provided by ARGS
+    try {
+      FileReader fr = new FileReader(args[0]);
+      BufferedReader br = new BufferedReader(fr);
+
+      while ((ln = br.readLine()) != null){
+        String newString = "";
+        String [] ar = ln.split(",");
+        List<Integer> numbers = new ArrayList<>();
+        for (String s : ar) {
+          if (numbers.contains(Integer.parseInt(s))){
+          }else{
+            numbers.add(Integer.parseInt(s));
+            newString += s + ",";
+          }
+        }
+
+        System.out.println(newString);
+      }
+      br.close();
+    }
+    catch(FileNotFoundException e){
+      System.out.println("Could not open file.");
+    }
+  }
+}
