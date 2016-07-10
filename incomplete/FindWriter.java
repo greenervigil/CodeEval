@@ -34,12 +34,14 @@ public class FindWriter {
       String ln;
       List<Integer> numKey = new ArrayList<Integer>();
       while ((ln = br.readLine()) != null){
-
-        String [] ar = ln.split("|");
+        System.out.println(ln);
+        String [] ar = ln.split("|\\s");
         System.out.println(ar.length);
+        System.out.println(ar);
         String name = ar[0];
         String [] keys = ar[1].trim().split(" ");
-        //System.out.println(keys[0]);
+        System.out.println(name);
+        System.out.println(keys);
         //for (String s : keys){
           //numKey.add(Integer.parseInt(s));
           //System.out.print(s + " ");
