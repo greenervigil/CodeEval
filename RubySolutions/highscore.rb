@@ -1,3 +1,6 @@
+#The first argument is a path to a file. Each line includes a test case #with a table. Table rows are separated by pipes '|'. All table rows #contain scores for each category, so all lines are of an equal length.
+
+#You need to print the highest score for each category.
 
 File.open(ARGV[0]).each_line do |line|
    line.strip!

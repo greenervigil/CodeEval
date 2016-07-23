@@ -42,11 +42,10 @@ public class SimpleSort {
     for (String s : num){
       sortList.add(Double.parseDouble(s));
     }
-    System.out.println(sortList);
     Collections.sort(sortList);
     for(Double d : sortList) {
-      newString += String.format("%.3f", d.toString()) + " ";
+      newString += d + " ";
     }
-    System.out.println(newString);
+    System.out.format("%.3f ", newString);
   }
 }
