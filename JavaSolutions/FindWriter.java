@@ -35,14 +35,13 @@ public class FindWriter {
       List<Integer> numKey = new ArrayList<Integer>();
       while ((ln = br.readLine()) != null){
         String [] ar = ln.split("\\|");
-        String name = ar[0];
+        String [] name = ar[0].split("");
         String [] keys = ar[1].trim().split(" ");
-        System.out.println(keys.toString());
         for (String s : keys){
           numKey.add(Integer.parseInt(s));
         }
-        //System.out.println(numKey);
         System.out.println(author(name, numKey));
+        numKey.clear();
         }
         br.close();
     }
@@ -52,15 +51,11 @@ public class FindWriter {
 
   }
 
-
-    public static String author(String codedString, List<Integer> key){
-      System.out.println(codedString);
-      String decodedAuthor = "";
-      for (int i : key){
-        //decodedAuthor += codedString.charAt(i);
-
-      }
-      System.out.println(codedString.charAt(57));
-      return decodedAuthor;
+  public static String author(String [] codedString, List<Integer> key){
+    String decodedAuthor = "";
+    for (int i : key){
+      decodedAuthor += codedString[i-1];
     }
+    return decodedAuthor;
+  }
 }
