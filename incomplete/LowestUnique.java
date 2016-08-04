@@ -18,6 +18,7 @@ Print a winner's position or 0 in case there is no winner. In the first line of 
 
 */
 import java.io.*;
+import java.util.*;
 
 public class LowestUnique {
   public static void main(String [] args) throws IOException{
@@ -29,7 +30,7 @@ public class LowestUnique {
       String ln;
       while ((ln = br.readLine()) != null){
         String [] ar = ln.split("\\s");
-        System.out.println(uniqueSort(ar));
+        uniqueSort(ar);
       }
 
       br.close();
@@ -39,18 +40,18 @@ public class LowestUnique {
     }
   }
 
-  public static String uniqueSort(String [] evaluatingArray) {
-    String eval = "";
-    for (int i = 0; i <= evaluatingArray.length; i++){
-      for (String e : evaluatingArray){
-        if (evaluatingArray[i] == e){
-        }else if (Integer.parseInt(evaluatingArray[i]) < Integer.parseInt(e)){
-          eval = e;
-        }else {
-          continue;
+  public static void uniqueSort(String [] evaluatingArray) {
+    List<Integer> eval = new ArrayList<>();
+    eval.add(Integer.parseInt(evaluatingArray[0]));
+    for (int i = 1; i < evaluatingArray.length; i++) {
+      for (int num : eval) {
+        if (Integer.parseInt(evaluatingArray[i]) == num) {
+            eval.remove(num);
+        } else {
+          eval.add(num);
         }
       }
     }
-    return eval;
+    System.out.println(eval);
   }
 }

@@ -44,8 +44,8 @@ public class SimpleSort {
     }
     Collections.sort(sortList);
     for(Double d : sortList) {
-      newString += d + " ";
+      newString += String.format("%.3f", d) + " ";
     }
-    System.out.format("%.3f ", newString);
+    System.out.println(newString);
   }
 }

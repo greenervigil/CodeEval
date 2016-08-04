@@ -1,3 +1,6 @@
+/*
+  Print out the table in a matrix like fashion, each number formatted to a width of 4 (The numbers are right-aligned and strip out leading/trailing spaces on each line).
+*/
 var start = 1;
 var table = [];
 while (start <= 12){
@@ -5,7 +8,7 @@ while (start <= 12){
     var number = start * i;
     table.push(number);
   }
-  console.log(table.join(" "));
+  console.log(table.join(""));
   table = [];
   start++;
 }

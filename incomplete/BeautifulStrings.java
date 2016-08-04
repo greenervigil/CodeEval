@@ -33,4 +33,8 @@ Print out the maximum beauty for the string. E.g.
 491
 729
 646
+
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+1 2 3 4 5 6 7 8 9 1011121314151617181920212223242526
+
 */
