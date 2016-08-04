@@ -36,7 +36,7 @@ public class LongestWord {
       String ln;
       while ((ln = br.readLine()) != null){
         String [] ar = ln.split("\\s");
-        System.out.println(evaluateWords(ar, longest(ar)));
+        System.out.println(longest(ar));
       }
 
       br.close();
@@ -45,17 +45,16 @@ public class LongestWord {
       System.out.println("Could not open file.");
     }
   }
-  public static int longest(String [] line){
-    int longest = 0;
-    for (int i = 0; i < line.length; i++){
-      if (line[i].length() == longest) {
-      }else if (line[i].length() > longest){
-        longest = i;
+  public static String longest(String [] words){
+    String longest = "";
+    int len = 0;
+    for (String word : words){
+      if (word.length() == len) {
+      }else if (word.length() > len){
+        len = word.length();
+        longest = word;
       }
     }
     return longest;
-  }
-  public static String evaluateWords (String [] str, int index){
-    return str[index];
   }
 }
