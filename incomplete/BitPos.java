@@ -5,18 +5,12 @@ INPUT SAMPLE:
 
 The first argument will be a path to a filename containing a comma separated list of 3 integers, one list per line. E.g.
 
-
-1
-2
 86,2,3
 125,1,2
 OUTPUT SAMPLE:
 
 Print to stdout, 'true'(lowercase) if the bits are the same, else 'false'(lowercase). E.g.
 
-
-1
-2
 true
 false
 */
