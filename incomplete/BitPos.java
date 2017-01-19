@@ -36,18 +36,18 @@ public class BitPos {
     }
   }
 
-  public static Boolean bitCompare(String str) {
+  public static boolean bitCompare(String str) {
     //separate the string into three parts; number, pos1, and pos2
     String [] evalArray = str.split(",");
     //convert number from int to bits
-    int number = Integer.parseInt(evalArray[0]);
-    BitSet b = new BitSet(number);
+    String binNum = Integer.toBinaryString(Integer.parseInt(evalArray[0]));
     int pos1 = Integer.parseInt(evalArray[1]);
     int pos2 = Integer.parseInt(evalArray[2]);
 
     //compare the two positions for equality, return true if they are
     // and false if they are not
-    if (b.get(pos1) == b.get(pos2)){
+    System.out.println(pos1 + " " + pos2);
+    if (binNum.charAt( pos1) == (binNum.charAt( pos2))){
       return true;
     }
     return false;

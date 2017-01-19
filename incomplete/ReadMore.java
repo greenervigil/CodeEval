@@ -59,10 +59,10 @@ public class ReadMore {
 
   public static String read(String readLine) {
     String newLine = " ";
-    if (readLine.length() > 55){
-      newLine = readLine.substring(0, 38).trim() + "...<Read More>";
-    } else {
+    if (readLine.length() <= 55){
       newLine = readLine;
+    } else {
+      newLine = readLine.substring(0, 40).trim().trim().concat("...<Read More>");
     }
     return newLine;
   }

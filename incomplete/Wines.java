@@ -42,11 +42,8 @@ public class Wines {
       while ((line = br.readLine()) != null){
         String [] arr = line.split(" | ");
         String [] ln = arr[0].split(" ");
-        String con = arr[1].trim();
+        String con = arr[3];
 
-        for (String l : arr){
-          System.out.println(l);
-        }
         System.out.println(getWine(ln, con));
       }
       br.close();
@@ -60,16 +57,16 @@ public class Wines {
       String search = "";
       String ret = "False";
       for (String s : arrList){
-        
+
       }
       return ret;
   }
 
     public static String getWine(String [] list, String compare){
       String ret = "False";
-      for (int i = 0; i < list.length; i++){
-        if (list[i].contains(compare)) {
-          ret = list[i];
+      for (String l : list){
+        if (l.contains(compare)) {
+          ret = l;
         }
       }
       return ret + " " + list.length;
