@@ -21,25 +21,27 @@ E.g.
 2,3,4,5
 */
 
-var fs  = require("fs");
+let fs  = require("fs");
 fs.readFileSync(process.argv[2]).toString().split('\n').forEach(function (line) {
     if (line !== "") { // ignore empty lines
         console.log(listSort(line.split(",")));
     }
 });
 
-function listSort(listArray) {
+const listSort = (listArray) => {
   if (listArray === 0) {
     return listArray;
   }
-  listArray = listArray.sort(function (a,b) {
+  /*listArray = listArray.sort(function (a,b) {
     return a*1 - b*1
   });
-  var finishedArray = [listArray[0]];
-  for (var i = 1; i < listArray.length; i++) {
+  let finishedArray = [listArray[0]];
+  for (let i = 1; i < listArray.length; i++) {
     if (listArray[i-1] !== listArray[i]) {
       finishedArray.push(listArray[i]);
     }
   }
   return finishedArray.join(",");
+  */
+    return new Set(listArray);
 }
