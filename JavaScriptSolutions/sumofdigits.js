@@ -17,7 +17,7 @@ Print to stdout, the sum of the numbers that make up the integer, one per line. 
 
 let fs  = require("fs");
 
-function summation(num){
+const summation = (num) => {
   let numbers = [];
   let sum = 0;
   for (let n = 0; n < num.length; n++) {
